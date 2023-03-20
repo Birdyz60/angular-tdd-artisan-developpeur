@@ -13,6 +13,9 @@ module.exports = function (config) {
       require("@angular-devkit/build-angular/plugins/karma"),
       require("karma-spec-reporter"),
     ],
+    files: [
+      require('path').join(__dirname, 'polyfills.ts'),
+    ],
     client: {
       jasmine: {
         // you can add configuration options for Jasmine here
