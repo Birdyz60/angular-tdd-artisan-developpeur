@@ -1,7 +1,7 @@
 import { createComponentFactory, Spectator } from '@ngneat/spectator';
 import { AppComponent } from './app.component';
 
-describe('Security Pass Checker', () => {
+describe('Security Number Checker', () => {
   let spectator: Spectator<AppComponent>;
   const createComponent = createComponentFactory({
     component: AppComponent,
