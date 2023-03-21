@@ -6,4 +6,6 @@ describe('Security Pass Checker', () => {
   const createComponent = createComponentFactory({
     component: AppComponent,
   });
+
+  it(`do nothing`, () => { });
 });
