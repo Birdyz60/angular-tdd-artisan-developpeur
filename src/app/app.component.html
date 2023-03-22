@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+  <div class="card" style="width: 70%">
+    <div class="card-header">
+      <h1 class="text-center">Validation du numéro de sécurité sociale</h1>
+    </div>
+    <div class="card-body">
+      <div class="alert alert-danger" data-cy-global-status *ngIf="form.controls['securityNumber'].hasError('pattern')">
+        Le patient ne peut pas être pris en charge !</div>
+      <form [formGroup]="form">
+        <input type="text" name="security-number" data-cy-security-number placeholder="Numéro de sécurité sociale"
+          class="form-control" formControlName="securityNumber"
+          [ngClass]="{'is-invalid': form.controls['securityNumber'].hasError('pattern')}" />
+        <p class="invalid-feedback" data-cy-security-number-error
+          *ngIf="form.controls['securityNumber'].hasError('pattern')">Numéro de sécurité sociale invalide !</p>
+        <button data-cy-submit class="btn btn-primary">Vérifier</button>
+      </form>
+    </div>
+  </div>
+</div>
