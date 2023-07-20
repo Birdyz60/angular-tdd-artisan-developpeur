@@ -7,5 +7,10 @@ describe('Security Number Checker', () => {
     component: SecurityNumberCheckerComponent,
   });
 
-  it(`do nothing`, () => { });
+  beforeEach(() => spectator = createComponent());
+
+  it('devrait apparaitre tel que décrit dans la maquette', () => {
+    expect(spectator.query('form')).toBeTruthy();
+    expect(spectator.query('input[name="security-number"]')).toBeTruthy();
+  });
 });
